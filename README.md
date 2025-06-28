@@ -1,124 +1,75 @@
-# 🍽️ AI食事分析アプリ (AI Food Analyzer)
+# Food Image Analyzer
 
-GPT-4 Visionを使用して食事の写真を分析し、栄養バランスとビタミンB群の含有量を評価するNext.js 14アプリケーションです。
+A Next.js 14 application that analyzes food images using GPT-4 Vision and provides dietary feedback in Japanese.
 
-## 🌟 機能
+## Features
 
-- 📸 食事の写真アップロード
-- 🤖 GPT-4 Visionによる画像分析
-- 🍎 ビタミンB群スコア（1-10）
-- ✅ 栄養面での良い点の指摘
-- 💡 改善提案
-- 📊 総合的な栄養評価
-- 🇯🇵 日本語での詳細フィードバック
+- Upload food images for analysis
+- Get nutritional feedback in Japanese using GPT-4 Vision
+- Responsive design for mobile and desktop
+- Dark mode support
 
-## 🚀 セットアップ
+## Tech Stack
 
-### 前提条件
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- shadcn/ui components
+- OpenAI GPT-4 Vision API
+- AI SDK
 
-- Node.js 18以上
-- OpenAI API キー
+## Getting Started
 
-### インストール
+### Prerequisites
 
-1. リポジトリをクローン:
+- Node.js 18.17 or later
+- OpenAI API key
+
+### Installation
+
+1. Clone the repository:
+
 \`\`\`bash
-git clone <your-repo-url>
-cd food-analyzer
+git clone https://github.com/yourusername/food-image-analyzer.git
+cd food-image-analyzer
 \`\`\`
 
-2. 依存関係をインストール:
+2. Install dependencies:
+
 \`\`\`bash
 npm install
+# or
+yarn
+# or
+pnpm install
 \`\`\`
 
-3. 環境変数を設定:
-\`\`\`bash
-cp .env.example .env.local
-\`\`\`
+3. Create a `.env.local` file in the root directory and add your OpenAI API key:
 
-`.env.local`ファイルを編集してOpenAI API キーを設定:
 \`\`\`
 OPENAI_API_KEY=your_openai_api_key_here
 \`\`\`
 
-4. 開発サーバーを起動:
+4. Run the development server:
+
 \`\`\`bash
 npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 \`\`\`
 
-5. ブラウザで `http://localhost:3000` を開く
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🛠️ 技術スタック
+## Deployment
 
-- **フレームワーク**: Next.js 14 (App Router)
-- **AI**: OpenAI GPT-4 Vision
-- **AI SDK**: Vercel AI SDK
-- **スタイリング**: Tailwind CSS
-- **UI コンポーネント**: shadcn/ui
-- **言語**: TypeScript
-- **アイコン**: Lucide React
+This project is ready to be deployed on Vercel:
 
-## 📁 プロジェクト構造
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/food-image-analyzer)
 
-\`\`\`
-├── app/
-│   ├── api/analyze/route.ts    # GPT-4 Vision API エンドポイント
-│   ├── layout.tsx              # ルートレイアウト
-│   └── page.tsx                # メインページ
-├── components/
-│   ├── image-upload.tsx        # 画像アップロードコンポーネント
-│   └── analysis-results.tsx    # 分析結果表示コンポーネント
-├── hooks/
-│   └── use-food-analysis.ts    # 食事分析カスタムフック
-├── lib/
-│   └── types.ts                # TypeScript型定義
-└── README.md
-\`\`\`
+Make sure to add your `OPENAI_API_KEY` to the environment variables in your Vercel project settings.
 
-## 🔧 環境変数
+## License
 
-| 変数名 | 説明 | 必須 |
-|--------|------|------|
-| `OPENAI_API_KEY` | OpenAI API キー | ✅ |
-
-## 📝 使用方法
-
-1. 食事の写真を撮影またはアップロード
-2. 「分析開始」ボタンをクリック
-3. AIが画像を分析（最大60秒）
-4. 結果を確認:
-   - ビタミンB群スコア
-   - 栄養面での良い点
-   - 改善提案
-   - 総合評価
-
-## 🚀 デプロイ
-
-### Vercelでのデプロイ
-
-1. GitHubリポジトリをVercelに接続
-2. 環境変数 `OPENAI_API_KEY` を設定
-3. デプロイ
-
-## 🤝 コントリビューション
-
-1. このリポジトリをフォーク
-2. 機能ブランチを作成 (`git checkout -b feature/amazing-feature`)
-3. 変更をコミット (`git commit -m 'Add amazing feature'`)
-4. ブランチにプッシュ (`git push origin feature/amazing-feature`)
-5. プルリクエストを作成
-
-## 📄 ライセンス
-
-このプロジェクトはMITライセンスの下で公開されています。
-
-## 🙏 謝辞
-
-- OpenAI GPT-4 Vision
-- Vercel AI SDK
-- Next.js チーム
-- shadcn/ui
-\`\`\`
-
-Let's also create an environment variables example file:
+MIT
